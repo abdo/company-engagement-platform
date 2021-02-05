@@ -3,18 +3,57 @@
   --main-bg: #7395ae;
   --secondary: aliceblue;
   --header-height: 4rem;
+  --gray: #a5a7a9;
 }
 
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
   background-color: var(--main-bg);
   margin: 0;
-  font-family: 'Lato', sans-serif;
   color: var(--main);
   padding: var(--header-height) 10px;
+}
+
+input,
+textarea {
+  border: 0;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  background-color: var(--secondary);
+  border: 0;
+  margin: 1rem 0;
+  color: var(--main);
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button.button--secondary {
+  background-color: var(--main);
+  color: var(--secondary);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
 }
 
 header {
@@ -27,8 +66,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  filter: drop-shadow(2px -4px 5px black);
-  position: absolute;
+  box-shadow: 2px -4px 9px black;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -43,6 +82,21 @@ header .logo {
   font-size: 1.4rem;
   color: var(--secondary);
   margin: 1.5rem 0 0.5rem;
+}
+
+.post-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+}
+
+.post-input {
+  width: 100%;
+  width: 80%;
+  max-width: 40rem;
 }
 
 .posts-container {
@@ -60,7 +114,7 @@ header .logo {
   border-radius: 10px;
   margin: 1rem;
   transition: all 0.2s;
-  box-shadow: inset -3px -8px 40px var(--main);
+  box-shadow: inset -3px -8px 40px var(--gray);
 }
 
 .post:hover {
@@ -69,6 +123,17 @@ header .logo {
 
 .post .content {
   margin: 0;
+}
+
+.comment-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1.5rem 0 0;
+}
+
+.comment-input {
+  max-width: 100%;
 }
 
 .post .comment {
