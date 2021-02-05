@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7395ae;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #557a95;
+}
+
+header {
+  background-color: aliceblue;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+header .logo {
+  width: 32px;
+}
