@@ -8,7 +8,7 @@ const request = async ({
     method,
     headers: {
       'Content-Type': 'application/json',
-      'x-apikey': '601cbdd36adfba69db8b6d9d',
+      'x-apikey': secrets.restdbApiKey,
       ...headers,
     },
     ...(body ? { body: JSON.stringify(body) } : {}),
