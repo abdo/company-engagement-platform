@@ -156,12 +156,14 @@ header .logo {
   box-shadow: inset -3px -8px 40px var(--gray);
 }
 
-.post:hover {
-  box-shadow: none;
+.post .content {
+  margin: 1rem 0 1.5rem;
+  white-space: pre-line;
 }
 
-.post .content {
-  margin: 0;
+.post .date {
+  font-size: 0.8rem;
+  color: var(--gray-dark);
 }
 
 .comment-input-container {
@@ -172,7 +174,7 @@ header .logo {
 }
 
 .comment-input {
-  max-width: 100%;
+  width: 100%;
 }
 
 .post .comment {
