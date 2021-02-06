@@ -9,6 +9,6 @@ Tools used:
 - HTML
 - CSS
 - JavaScript
-- [restdb](https://restdb.io) online database (nosql), for saving json objects
+- [restdb](https://restdb.io) online database (nosql), for saving/manipulating json objects
 
-This is a responsive website, where UX is thoroughly considered.
+This is a responsive website, where UX is thoroughly considered. For example, allowing for instant feedback, without having to wait for backend response, and then upon backend response, giving proper feedback.
