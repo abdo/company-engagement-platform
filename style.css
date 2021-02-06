@@ -4,6 +4,8 @@
   --secondary: aliceblue;
   --header-height: 4rem;
   --gray: #a5a7a9;
+  --gray-dark: #666666;
+  --error: #ff7373;
 }
 
 * {
@@ -56,6 +58,12 @@ button:focus {
   outline: none;
 }
 
+button[disabled] {
+  background-color: var(--gray);
+  color: var(--gray-dark);
+  cursor: not-allowed;
+}
+
 header {
   background-color: var(--secondary);
   width: 100vw;
@@ -66,10 +74,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  box-shadow: 2px -4px 9px black;
+  box-shadow: 2px -4px 9px var(--gray-dark);
   position: fixed;
   top: 0;
   left: 0;
+  user-select: none;
 }
 
 header .logo {
@@ -104,6 +113,36 @@ header .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.loader {
+  border: 0.5rem solid var(--secondary); /* Light grey */
+  border-top: 0.5rem solid var(--main); /* Blue */
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 1s linear infinite;
+  margin: 1rem 0 0;
+}
+
+.feedback {
+  background-color: var(--main);
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: var(--secondary);
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px var(--gray-dark);
+}
+
+.feedback * {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.error {
+  color: var(--error);
 }
 
 .post {
@@ -142,4 +181,13 @@ header .logo {
   padding: 1rem;
   border-radius: 10px;
   color: var(--secondary);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

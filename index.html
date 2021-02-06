@@ -44,35 +44,20 @@
     <div class="post-input-container">
       <textarea
         class="post-input"
-        placeholder="Create post"
+        placeholder="Create post (min 24 characters..)"
         autofocus
         rows="8"
+        oninput="onInputPostChange()"
       ></textarea>
-      <button>Post</button>
+      <button class="post-button" disabled onclick="onPost()">Post</button>
     </div>
 
     <div class="posts-container">
-      <div class="post">
-        <p class="content">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed harum
-          quidem iure obcaecati eveniet fuga dolorem quam, quis facilis sunt
-          quaerat fugiat officiis, necessitatibus doloremque. Culpa harum
-          dignissimos at quidem.
-        </p>
-
-        <div class="comment-input-container">
-          <input class="comment-input" placeholder="Create comment" />
-          <button class="button--secondary">Comment</button>
-        </div>
-
-        <p>Comments:</p>
-        <div class="comment">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et possimus
-          fugit commodi quis unde cumque obcaecati iure debitis eum sit atque,
-          ratione impedit dolor blanditiis laborum, aliquam, porro consectetur.
-          Rem?
-        </div>
-      </div>
+      <div class="loader"></div>
     </div>
+
+    <div class="feedback"></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
